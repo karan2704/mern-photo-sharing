@@ -47,7 +47,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-.connect("mongodb+srv://karan:" + PASSWORD +"@mern-cluster-lcn6t.mongodb.net/YourPlaces?retryWrites=true&w=majority", { useUnifiedTopology: true,  useNewUrlParser: true } )
+.connect("mongodb+srv://karan:" + process.env.PASSWORD +"@mern-cluster-lcn6t.mongodb.net/YourPlaces?retryWrites=true&w=majority", { useUnifiedTopology: true,  useNewUrlParser: true } )
 .then(() => {
   app.listen(5000);
 })
